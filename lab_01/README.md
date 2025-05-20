@@ -56,8 +56,16 @@ mamba env list
 
 ## Jak składać genom
 
-- Sprawdzanie jakości przed filtracją
-- Filtracja
-- Sprawdzenie jakości po filtracji
-- Składanie
-- Sprawdzenie jakosci złożenia
+### Illumina
+- Sprawdzanie jakości przed filtracją (fastp)
+- Filtracja (fastp)
+- Sprawdzenie jakości po filtracji (fastp)
+- Składanie (metaSpades/megahit)
+- Sprawdzenie jakosci złożenia (metaQuast)
+
+### Nanopore
+- Sprawdzanie jakości przed filtracją (nanoplot)
+- Filtracja (porechop & filtlong)
+- Sprawdzenie jakości po filtracji (nanoplot)
+- Składanie (metaFlye)
+- Sprawdzenie jakosci złożenia (metaQuast)
