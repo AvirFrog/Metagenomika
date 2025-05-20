@@ -53,3 +53,11 @@ mamba env list
 - nanoplot
 - (meta)FLye
 - metaquast
+
+## Jak składać genom
+
+- Sprawdzanie jakości przed filtracją
+- Filtracja
+- Sprawdzenie jakości po filtracji
+- Składanie
+- Sprawdzenie jakosci złożenia
