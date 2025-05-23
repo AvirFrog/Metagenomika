@@ -42,3 +42,16 @@ Looking for dependencies...
         mmseqs          : /home/[wasze_konto]/mambaforge/envs/SemiBin/bin/mmseqs
 ```
 Jeśli jakiegoś programu brakuje to należy go ręcznie doinstalować w środowisku, w którym zainstalowany jest `SemiBin`.
+
+### Instalacja pozostałych narzędzi
+
+Instalacja BWA-MEM2:
+```bash
+mamba install bioconda::bwa-mem2
+```
+
+Instalacja minimap2:
+```bash
+mamba install bioconda::minimap2
+```
+
