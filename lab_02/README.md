@@ -76,3 +76,4 @@ samtools sort -o merged.sorted.bam merged.bam
 
 samtools index merged.sorted.bam
 
+SemiBin2 single_easy_bin -i ../assembly/hybrid_assembly.fasta -b hybrid.sorted.bam -o co-assembly_output
