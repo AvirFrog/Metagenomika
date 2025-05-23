@@ -50,20 +50,29 @@ Instalacja BWA-MEM2:
 mamba install bioconda::bwa-mem2
 ```
 
+Instalacja minimap2:
+```bash
+mamba install bioconda::minimap2
+```
+
 bwa-mem2 index hybrid_assembly.fasta
 bwa-mem2 mem -t 10 hybrid_assembly.fasta ../illumina/illumina_R1.fasta ../illumina/illumina_R2.fasta > illumina.sam 
 
 minimap2 -d hybrid_assembly.mmi hybrid_assembly.fasta
 minimap2 -ax map-ont -t 10 hybrid_assembly.mmi ../nanopore/nanopore.fastq -o nanopore.sam
 
-samtools sort -@ 8 -o illumina.bam illumina.sam
-samtools sort -@ 8 -o nanopore.bam nanopore.sam
-samtools merge -@ 38 hybrid.bam illumina.bam nanopore.bam
+samtools view -h -b sample1.sam -o sample1.bam -@ 10
+samtools view -h -b sample2.sam -o sample2.bam -@ 10
 
+samtools view -b -F 4 sample1.bam -o sample1.mapped.bam -@ 10
+samtools view -b -F 4 sample2.bam -o sample2.mapped.bam -@ 10
 
+samtools sort -m 1000000000 sample1.mapped.bam -o sample1.mapped.sorted.bam -@ 10
+samtools sort -m 1000000000 sample2.mapped.bam -o sample2.mapped.sorted.bam -@ 10
 
-Instalacja minimap2:
-```bash
-mamba install bioconda::minimap2
-```
+samtools merge merged.bam sample1.mapped.sorted.bam sample2.mapped.sorted.bam -@ 10
+
+samtools sort -o merged.sorted.bam merged.bam
+
+samtools index merged.sorted.bam
 
