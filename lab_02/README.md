@@ -117,3 +117,6 @@ końcowa analiza taksonomiczna
 ```bash
 gtdbtk classify --extension gz --genome_dir ../download/output_bins --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 19
 ```
+
+## Analiza funkcjonalna wybranego MAGa
+[eggNOG-mapper](http://eggnog-mapper.embl.de)
