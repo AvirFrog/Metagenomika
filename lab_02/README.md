@@ -98,3 +98,22 @@ samtools sort -o merged.sorted.bam merged.bam
 samtools index merged.sorted.bam
 
 SemiBin2 single_easy_bin -i ../assembly/hybrid_assembly.fasta -b hybrid.sorted.bam -o co-assembly_output
+
+## Analiza taksonomiczna hipotetycznych genomów
+
+Posirtowanym genomom można przporządkowac najbardziej prawdopodobną scieżkę taksonomiczną kożystając z  
+
+### przygotowanie danych
+```bash
+gtdbtk identify --genome_dir /output_bins/  --out_dir identyfy_out --extension gz  --cpus 19
+```
+
+### alignment do bazy GTDB
+```bash
+gtdbtk align --identify_dir identyfy_out --out_dir align_out
+```
+
+### Końcowa analiza taksonomiczna
+```bash
+gtdbtk classify --extension gz --genome_dir ../download/output_bins --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 19
+```
