@@ -1,18 +1,13 @@
+# Nanaliza złożonego metagenomu
 
-**Wersja Testowa zajęć nr. 2**
-
-zawartość tego pliku może się zmienić przed wtorkowymi zajęciami ;) 
-
-
-# Adnotacja metagenomów
-
-{TEKST}
+Na dzisiejszych zajęciach przeanalizujemy metagenom zsekwencjonowany metoda shootgun.
+Wykorzystacie sekwencje złożone na poprzednich zajęciach do sortowania (binning), analizy taksonomicznej i funkcjonalnej
 
 ## Binnowanie złożenia
 
-{TEKST}
+Złożone kontigi trzeba posortować aby otrzymać hipotetyczne genomy (MAGs) można to zrobić narzędziem SemiBin
 
-### Instalacja narzędzia SemiBin
+### Instalacja narzędzia SemiBin2
 
 Nowe środowisko:
 ```bash
