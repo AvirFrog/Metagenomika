@@ -126,7 +126,7 @@ Wybierz genom i przeprowadz jego adnotację funkcjomnalną
 ## Pyania na koniec
 Prześlij na koniec zajęć na kanale Teams odpowiedzi na pytania:<br>
 * Która metoda binningu daje najlepsze rezultaty. Dlaczego tak myślisz?<br>
-* Ile gatunków i rodzajów występuje w badanym metagenomie.<br>
+* Ile gatunków i rodzajów występuje w badanym metagenomie?<br>
 * Znajdź geny związane z komunikacją komórkową (GO:0007154), prześlij w formie pliku tsv<br>
 
 
