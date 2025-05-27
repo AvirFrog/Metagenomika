@@ -122,4 +122,17 @@ gtdbtk classify --extension gz --genome_dir ../download/output_bins --align_dir 
 ## Analiza funkcjonalna wybranego MAGa
 Wybierz genom i przeprowadz jego adnotację funkcjomnalną
 [eggNOG-mapper](http://eggnog-mapper.embl.de)
-Znajdź geny związane z komunikacją komórkową (GO:0007154)
+
+## Pyania na koniec
+Prześlij na koniec zajęć na kanale Teams odpowiedzi na pytania:
+```
+Która metoda binningu daje najlepsze rezultaty. Dlaczego tak myślisz?
+```
+```
+Ile gatunków i rodzajów występuje w badanym metagenomie.
+```
+```
+Znajdź geny związane z komunikacją komórkową (GO:0007154), prześlij w formie pliku tsv
+```
+
+
