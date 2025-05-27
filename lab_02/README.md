@@ -82,22 +82,23 @@ samtools view -h -b sample1.sam -o sample1.bam -@ 10
 ```
 
 ```bash
-samtools view -h -b sample2.sam -o sample2.bam -@ 10
+samtools view -b -F 4 sample1.bam -o sample1.mapped.bam -@ 10
 ```
 
-samtools view -b -F 4 sample1.bam -o sample1.mapped.bam -@ 10
-samtools view -b -F 4 sample2.bam -o sample2.mapped.bam -@ 10
-
+```bash
 samtools sort -m 1000000000 sample1.mapped.bam -o sample1.mapped.sorted.bam -@ 10
-samtools sort -m 1000000000 sample2.mapped.bam -o sample2.mapped.sorted.bam -@ 10
+```
 
-samtools merge merged.bam sample1.mapped.sorted.bam sample2.mapped.sorted.bam -@ 10
+## SemiBin2
 
-samtools sort -o merged.sorted.bam merged.bam
-
-samtools index merged.sorted.bam
-
+```bash
 SemiBin2 single_easy_bin -i ../assembly/hybrid_assembly.fasta -b hybrid.sorted.bam -o co-assembly_output
+```
+## Checkm2
+
+```bash
+checkm2 predict --threads 13 -x .fa.gz --force --input [KATALOG Z BINAMI] --output-directory [OUTPUT]
+```
 
 ## Analiza taksonomiczna hipotetycznych genomów
 
