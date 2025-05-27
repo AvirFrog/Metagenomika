@@ -119,4 +119,6 @@ gtdbtk classify --extension gz --genome_dir ../download/output_bins --align_dir 
 ```
 
 ## Analiza funkcjonalna wybranego MAGa
+Wybierz genom i przeprowadz jego adnotację funkcjomnalną
 [eggNOG-mapper](http://eggnog-mapper.embl.de)
+Znajdź geny związane z komunikacją komórkową (GO:0007154)
