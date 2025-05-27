@@ -106,7 +106,7 @@ Posirtowanym genomom można przporządkowac najbardziej prawdopodobną scieżkę
 
 przygotowanie danych
 ```bash
-gtdbtk identify --genome_dir /output_bins/  --out_dir identyfy_out --extension gz  --cpus 19
+gtdbtk identify --genome_dir output_bins  --out_dir identyfy_out --extension gz  --cpus 19
 ```
 
 alignment do bazy GTDB
