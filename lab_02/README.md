@@ -55,14 +55,40 @@ Instalacja minimap2:
 mamba install bioconda::minimap2
 ```
 
+## Mapowanie BWA-MEM2 & Minimap2
+
+### BWA-MEM2
+Indeksowanie:
+```bash
 bwa-mem2 index hybrid_assembly.fasta
-bwa-mem2 mem -t 10 hybrid_assembly.fasta ../illumina/illumina_R1.fasta ../illumina/illumina_R2.fasta > illumina.sam 
+```
+Mapowanie:
+```bash
+bwa-mem2 mem -t 10 hybrid_assembly.fasta ../illumina/illumina_R1.fasta ../illumina/illumina_R2.fasta > illumina.sam
+```
+### Minimap2
 
+Indeksowanie:
+```bash
 minimap2 -d hybrid_assembly.mmi hybrid_assembly.fasta
+```
+Mapowanie:
+```bash
 minimap2 -ax map-ont -t 10 hybrid_assembly.mmi ../nanopore/nanopore.fastq -o nanopore.sam
+```
 
+## Tworzenie plików BAM
+
+Sposób ich przygotowania pochodzi z samouczka do narzedzia SemiBin
+
+Tworzymy pliki BAM
+```bash
 samtools view -h -b sample1.sam -o sample1.bam -@ 10
+```
+
+```bash
 samtools view -h -b sample2.sam -o sample2.bam -@ 10
+```
 
 samtools view -b -F 4 sample1.bam -o sample1.mapped.bam -@ 10
 samtools view -b -F 4 sample2.bam -o sample2.mapped.bam -@ 10
