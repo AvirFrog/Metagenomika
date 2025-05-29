@@ -1,4 +1,4 @@
-# Nanaliza złożonego metagenomu
+# Analiza złożonego metagenomu
 
 Na dzisiejszych zajęciach przeanalizujemy metagenom zsekwencjonowany metoda shootgun.
 Wykorzystacie sekwencje złożone na poprzednich zajęciach do sortowania (binning), analizy taksonomicznej i funkcjonalnej
