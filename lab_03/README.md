@@ -1,3 +1,7 @@
+# 🚧 DOKUMENT W PRZYGOTOWANIU 🚧
+
+```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
+
 # Analiza taksonomiczna
 
 ## Kraken2
