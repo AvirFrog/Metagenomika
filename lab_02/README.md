@@ -1,3 +1,7 @@
+# 🚧 DOKUMENT W PRZYGOTOWANIU 🚧
+
+```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
+
 # Analiza złożonego metagenomu
 
 Na dzisiejszych zajęciach przeanalizujemy metagenom zsekwencjonowany metoda shootgun.
