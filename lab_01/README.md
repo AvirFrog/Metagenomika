@@ -4,9 +4,10 @@
 
 # Rekonstrukcja i klasyfikacja genomów bakteryjnych
 
+Dane do zajęć znajdziesz w ```/home/database/metgen26```, każdy ma do pobrania pliki z konkretnego dnia (Day1/2/3/4)
 
 ```bash
-cp -r /home/jbarylski/metagenomika/ ./
+cp -r {ścieżka} ./
 ```
 
 ##  Instalacja Condy i Mamby
@@ -14,15 +15,15 @@ cp -r /home/jbarylski/metagenomika/ ./
 Pobieranie miniforge
 
 ```bash
-wget https://github.com/conda-forge/miniforge/releases/download/24.9.2-0/Mambaforge-24.9.2-0-Linux-x86_64.sh
+wget https://github.com/conda-forge/miniforge/releases/download/25.9.1-0/Miniforge3-25.9.1-0-Linux-x86_64.sh
 ```
 
 ```bash
-chmod +x Mambaforge-24.9.2-0-Linux-x86_64.sh
+chmod +x Miniforge3-25.9.1-0-Linux-x86_64.sh 
 ```
 
 ```bash
-./Mambaforge-24.9.2-0-Linux-x86_64.sh
+./Miniforge3-25.9.1-0-Linux-x86_64.sh 
 ```
 
 Teraz należy się przelogować
@@ -50,25 +51,6 @@ mamba env list
 
 ## Narzędzia do instalacji
 
-- Nanopore
-- porechop
-- filtlong
-- nanoplot
-- (meta)FLye
-- metaquast
+DODAĆ LISTE NARZĘDZI
 
-## Jak składać genom
-
-### Illumina
-- Sprawdzanie jakości przed filtracją (fastp)
-- Filtracja (fastp)
-- Sprawdzenie jakości po filtracji (fastp)
-- Składanie (metaSpades/megahit)
-- Sprawdzenie jakosci złożenia (metaQuast)
-
-### Nanopore
-- Sprawdzanie jakości przed filtracją (nanoplot)
-- Filtracja (porechop & filtlong)
-- Sprawdzenie jakości po filtracji (nanoplot)
-- Składanie (metaFlye)
-- Sprawdzenie jakosci złożenia (metaQuast)
+## Kolejne kroki...
