@@ -1,6 +1,6 @@
 # Metagenomika 2026 🧬
 
-Podczas zajęć będziemy korzystać z danych pochodzących z projektu **Uniwersytetu w Cape Town** – próbki z **Zatoki Świętej Heleny**. Badano krótkoterminową zmienność mikroorganizmów, nano- i pikoplankonu pod koniec sezonu upwellingu (zjawisko wynoszenia zimnych, bogatych w składniki odżywcze wód głębinowych ku powierzchni) - [St Helena Bay_PO_ Meta-omic study)](https://www.ncbi.nlm.nih.gov/bioproject/PRJEB29581/).
+Podczas zajęć będziemy korzystać z danych pochodzących z projektu **Uniwersytetu w Cape Town** – próbki z **Zatoki Świętej Heleny**. Badano krótkoterminową zmienność mikroorganizmów, nano- i pikoplankonu pod koniec sezonu upwellingu (zjawisko wynoszenia zimnych, bogatych w składniki odżywcze wód głębinowych ku powierzchni) - [St Helena Bay_PO_ Meta-omic study](https://www.ncbi.nlm.nih.gov/bioproject/PRJEB29581/).
 
 ```Dane z których będziemy korzystać dotyczą czterech dni eksperymentu oraz trzech głębokości z których zostały pobrane```
 
