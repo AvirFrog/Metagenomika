@@ -1,6 +1,9 @@
-# Składanie Metagenomu Bakterii
+# 🚧 DOKUMENT W PRZYGOTOWANIU 🚧
 
-Ścieżka do plików 
+```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
+
+# Rekonstrukcja i klasyfikacja genomów bakteryjnych
+
 
 ```bash
 cp -r /home/jbarylski/metagenomika/ ./
