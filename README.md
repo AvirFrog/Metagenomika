@@ -6,10 +6,10 @@ Podczas zajęć będziemy korzystać z danych pochodzących z projektu **Uniwers
 
 Niżej znajdziesz tabelę w której link przeniesie Cię do odpowiedniego tematu
 
-| Nr Zajęć | Temat  | Link  |
-|:---:|:---:|:---:|
-| 01. | Rekonstrukcja i klasyfikacja genomów bakteryjnych | [Lab_01](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
-| 02. | Rekonstrukcja i klasyfikacja genomów wirusowych | [Lab_02](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
-| 03. | Interakcje bakteriofag-gospodarz i zmienność społeczności mikroorganizmów | [Lab_03](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
+| Nr Zajęć | Data | Temat  | Link  |
+|:---:|:---:|:---:|:---:|
+| 01. | 14.05.26 | Rekonstrukcja i klasyfikacja genomów bakteryjnych | [Lab_01](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
+| 02. | 21.05.26 | Rekonstrukcja i klasyfikacja genomów wirusowych | [Lab_02](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
+| 03. | 28.05.26 | Interakcje bakteriofag-gospodarz i zmienność społeczności mikroorganizmów | [Lab_03](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
 
 Jeśli masz pytanie (po za zajęciami) to polecam kontkatować się przez maila kacper.dudczak@amu.edu.pl lub teams
