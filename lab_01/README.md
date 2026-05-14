@@ -1,7 +1,3 @@
-# 🚧 DOKUMENT W PRZYGOTOWANIU 🚧
-
-```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
-
 # Rekonstrukcja i klasyfikacja genomów bakteryjnych
 
 Dane do zajęć znajdziesz w ```/home/database/metgen26```, każdy ma do pobrania pliki z konkretnego dnia (Day1/2/3/4)
@@ -51,6 +47,23 @@ mamba env list
 
 ## Narzędzia do instalacji
 
-DODAĆ LISTE NARZĘDZI
+fastp
+metaQuast
+BWA-MEM
+SemiBin2
+CheckM2
+Kraken2
+Bracken
+KronaTools
 
-## Kolejne kroki...
+## Zadania na dziś
+
+Surowe odczyty znajdziecie w `/home/database/metgen26/raw_reads`, każda osoba dostanie do przeanalizowania próbki z jednego dnia (3 próbki na jeden dzień). Scaffoldy znajdziecie w `/home/database/metgen26/scaffolds`
+
+1. Sprawdzamy je za pomocą fastp
+2. MetaQuastem wybieramy najlepsze złożenie
+3. Do najlepszego złożenia mapujemy za pomocą BWA-MEM przefiltrowane odczyty
+4. Robimy wspólnie JEDEN binning za pomocą SemiBin2
+5. Sprawamy za pomocą CheckM2 jakość bininngu
+6. Sprawdzamy Kraken2/Bracken/Krona
+
