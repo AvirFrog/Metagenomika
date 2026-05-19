@@ -2,10 +2,6 @@
 
 Dane do zajęć znajdziesz w ```/home/database/metgen26```, każdy ma do pobrania pliki z konkretnego dnia (Day1/2/3/4)
 
-```bash
-cp -r {ścieżka} ./
-```
-
 ##  Instalacja Condy i Mamby
 
 Pobieranie miniforge
