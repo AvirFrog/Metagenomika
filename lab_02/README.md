@@ -10,5 +10,9 @@ Na dzisiejszych zajęciach postaramy się zrekonstruować i sklasyfikować genom
 
 [CheckV](https://anaconda.org/channels/bioconda/packages/checkv/overview)
 
+## Do zrobienia:
 
+1. Uruchom klasyfikacje gtdb na binach z poprzednich zajęć
+2. Uruchom geNomad na wybranym scaffoldzie
+3. Uruchom CheckV i sprawdz jakość geNomada
 
