@@ -1,7 +1,3 @@
-# 🚧 DOKUMENT W PRZYGOTOWANIU 🚧
-
-```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
-
 # Analiza taksonomiczna hipotetycznych genomów
 
 Do tego wykorzystamy bazę GTDB ale najpierw sprawdzmy czy mamy poprawną ścieżkę: 
@@ -25,17 +21,24 @@ gtdbtk classify_wf --genome_dir [PATH] --out_dir [OUTPUT_PATH --cpus 25 --extens
 ```
 
 ## Analiza funkcjonalna wybranego MAGa
-Wybierz genom i przeprowadz jego adnotację funkcjomnalną
+
+Po instalacji bakty należy ją uruchomić, pobieranie bazy danych nie jest koniecznie ponieważ znajduje sie w `/home/database/bakta_db`
+
+```bash
+bakta --db /home/database/bakta_db --verbose --output results_bakta/ --prefix assembly --threads 8 [WYBRANY_MAG]
+```
+Analizę funkcjonalną można przeprowadzić również za pomocą: 
+
 [eggNOG-mapper](http://eggnog-mapper.embl.de)
 
-## Pyania na koniec
-Prześlij na koniec zajęć odpowiedzi na pytania:<br>
-* Która metoda binningu daje najlepsze rezultaty. Dlaczego tak myślisz?<br>
-* Ile gatunków i rodzajów występuje w badanym metagenomie?<br>
-* Znajdź geny związane z komunikacją komórkową (GO:0007154), prześlij w formie pliku tsv<br>
+## Identyfikacja profagów
 
+Będziemy potrzebować pliku w formacie `GenBank`, znajdziesz go w folderze z plikami wyjściowymi z programu `bakta` z rozszerzeniem `.gbff`
 
-końcowa analiza taksonomiczna
 ```bash
-gtdbtk classify --extension gz --genome_dir ../download/output_bins --align_dir align_out --out_dir classify_out --skip_ani_screen --cpus 19
+PhiSpy.py TWÓJ_PLIK_GENBANK -o NAZWA_KATALOGU_WYJSCIOWEGO --threads 8 --output_choice 7
 ```
+
+## Skrypt do napisania
+
+Następnie napisz skrypt, który sprawdzi czy zidentyfikoane profagi pokrywają się z bakteriofagami wykrytymi przez geNomad
