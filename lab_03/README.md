@@ -2,133 +2,26 @@
 
 ```Ostateczna wersja w dniu zajęć może różnić się od obecnej.```
 
-# Analiza taksonomiczna
+# Analiza taksonomiczna hipotetycznych genomów
 
-## Kraken2
-
-```bash
-mamba activate kraken2
-mamba install bioconda::kraken2
-```
+Do tego wykorzystamy bazę GTDB ale najpierw sprawdzmy czy mamy poprawną ścieżkę: 
 
 ```bash
-kraken2-build --special silva --db silva_db 
+echo $GTDBTK_DATA_PATH
 ```
-lub
-
-```txt
-https://benlangmead.github.io/aws-indexes/k2
-```
-
-interesuje nas baza silva (16S)
-
-## Krona Tools
-
-### Instalacja narzędzia SemiBin2
-
-Nowe środowisko:
+Wynik powinien być taki:
 ```bash
-mamba create -n SemiBin
+$ /home/database/miniforge3/envs/gtdbtk-2.7.2/share/gtdbtk-2.7.2/db
 ```
 
-Aktywacja środowiska:
+Jeśli ścieżka jest inna skorzystaj z:
 ```bash
-mamba activate SemiBin
+export GTDBTK_DATA_PATH=/home/database/miniforge3/envs/gtdbtk-2.7.2/share/gtdbtk-2.7.2/db
 ```
 
-Instalacja SemiBin:
+Następnie uruchamiamy klasyfikacje: 
 ```bash
-mamba install -c conda-forge -c bioconda semibin
-```
-
-Sprawdzenie czy wszystko jest zainstalowane poprawnie:
-```bash
-SemiBin2 check_install
-```
-Oczekiwany output:
-```text
-Looking for dependencies...
-        bedtools        : /home/[wasze_konto]/mambaforge/envs/SemiBin/bin/bedtools
-        hmmsearch       : /home/[wasze_konto]/mambaforge/envs/SemiBin/bin/hmmsearch
-        prodigal        : /home/[wasze_konto]/mambaforge/envs/SemiBin/bin/prodigal
-        mmseqs          : /home/[wasze_konto]/mambaforge/envs/SemiBin/bin/mmseqs
-```
-Jeśli jakiegoś programu brakuje to należy go ręcznie doinstalować w środowisku, w którym zainstalowany jest `SemiBin`.
-
-### Instalacja pozostałych narzędzi
-
-Instalacja BWA-MEM2:
-```bash
-mamba install bioconda::bwa-mem2
-```
-
-Instalacja minimap2:
-```bash
-mamba install bioconda::minimap2
-```
-
-## Mapowanie BWA-MEM2 & Minimap2
-
-### BWA-MEM2
-Indeksowanie:
-```bash
-bwa-mem2 index hybrid_assembly.fasta
-```
-Mapowanie:
-```bash
-bwa-mem2 mem -t 10 hybrid_assembly.fasta ../illumina/illumina_R1.fasta ../illumina/illumina_R2.fasta > illumina.sam
-```
-### Minimap2
-
-Indeksowanie:
-```bash
-minimap2 -d hybrid_assembly.mmi hybrid_assembly.fasta
-```
-Mapowanie:
-```bash
-minimap2 -ax map-ont -t 10 hybrid_assembly.mmi ../nanopore/nanopore.fastq -o nanopore.sam
-```
-
-## Tworzenie plików BAM
-
-Sposób ich przygotowania pochodzi z samouczka do narzedzia SemiBin
-
-Tworzymy pliki BAM
-```bash
-samtools view -h -b sample1.sam -o sample1.bam -@ 10
-```
-
-```bash
-samtools view -b -F 4 sample1.bam -o sample1.mapped.bam -@ 10
-```
-
-```bash
-samtools sort -m 1000000000 sample1.mapped.bam -o sample1.mapped.sorted.bam -@ 10
-```
-
-## SemiBin2
-
-```bash
-SemiBin2 single_easy_bin -i ../assembly/hybrid_assembly.fasta -b hybrid.sorted.bam -o co-assembly_output
-```
-## Checkm2
-
-```bash
-checkm2 predict --threads 13 -x .fa.gz --force --input [KATALOG Z BINAMI] --output-directory [OUTPUT]
-```
-
-## Analiza taksonomiczna hipotetycznych genomów
-
-Posirtowanym genomom można przporządkowac najbardziej prawdopodobną scieżkę taksonomiczną kożystając z  
-
-przygotowanie danych
-```bash
-gtdbtk identify --genome_dir output_bins  --out_dir identyfy_out --extension gz  --cpus 19
-```
-
-alignment do bazy GTDB
-```bash
-gtdbtk align --identify_dir identyfy_out --out_dir align_out
+gtdbtk classify_wf --genome_dir [PATH] --out_dir [OUTPUT_PATH --cpus 25 --extension fa --skip_ani_screen
 ```
 
 ## Analiza funkcjonalna wybranego MAGa
