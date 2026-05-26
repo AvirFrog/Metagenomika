@@ -27,9 +27,6 @@ Po instalacji bakty należy ją uruchomić, pobieranie bazy danych nie jest koni
 ```bash
 bakta --db /home/database/bakta_db --verbose --output results_bakta/ --prefix assembly --threads 8 [WYBRANY_MAG]
 ```
-Analizę funkcjonalną można przeprowadzić również za pomocą: 
-
-[eggNOG-mapper](http://eggnog-mapper.embl.de)
 
 ## Identyfikacja profagów
 
