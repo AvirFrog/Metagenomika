@@ -10,6 +10,6 @@ Niżej znajdziesz tabelę w której link przeniesie Cię do odpowiedniego tematu
 |:---:|:---:|:---:|:---:|
 | 01. | 14.05.26 | Rekonstrukcja i klasyfikacja genomów bakteryjnych | [Lab_01](https://github.com/AvirFrog/Metagenomika/tree/main/lab_01) |
 | 02. | 21.05.26 | Rekonstrukcja i klasyfikacja genomów wirusowych | [Lab_02](https://github.com/AvirFrog/Metagenomika/blob/main/lab_02/README.md) |
-| 03. | 28.05.26 | Interakcje bakteriofag-gospodarz i zmienność społeczności mikroorganizmów | [Lab_03](https://www.youtube.com/watch?v=hf1DkBQRQj4) |
+| 03. | 28.05.26 | Interakcje bakteriofag-gospodarz i zmienność społeczności mikroorganizmów | [Lab_03](https://github.com/AvirFrog/Metagenomika/edit/main/lab_03/README.md) |
 
 Jeśli masz pytanie (po za zajęciami) to polecam kontkatować się przez maila kacper.dudczak@amu.edu.pl lub teams
