@@ -17,7 +17,7 @@ export GTDBTK_DATA_PATH=/home/database/miniforge3/envs/gtdbtk-2.7.2/share/gtdbtk
 
 Następnie uruchamiamy klasyfikacje: 
 ```bash
-gtdbtk classify_wf --genome_dir [PATH] --out_dir [OUTPUT_PATH --cpus 25 --extension fa --skip_ani_screen
+gtdbtk classify_wf --genome_dir [PATH] --out_dir [OUTPUT_PATH] --cpus 38 --extension fa
 ```
 
 ## Analiza funkcjonalna wybranego MAGa
